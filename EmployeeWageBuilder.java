@@ -9,14 +9,18 @@ public class EmployeeWageBuilder {
 	
 		final int WAGE_PER_HOUR = 20;	
 		Random random= new Random();
-		int isEmpPresent = random.nextInt(2);
+		int isEmpPresent = random.nextInt(3);
 		int empHR;
 		if (isEmpPresent == 1) {
 			System.out.println("Employee is present");
 			empHR = 8;
-		} else {
+		} else if(isEmpPresent == 0){
 			System.out.println("Employee is absent");
 			empHR = 0;
+		}
+		else {
+			System.out.println("Emp[loyee is working as FullTime");
+			empHR=4;
 		}
 		int empWage = empHR * WAGE_PER_HOUR;
 		System.out.println("Employee Wage is : "+empWage);
